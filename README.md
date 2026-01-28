@@ -22,3 +22,9 @@ Of course, one could collect those population codes from the activity of a reser
 
 So far so good, but it turns out that once you have an embedding, you can do some pretty handy stuff. First, you can compare it to some other embedding (cosine similarity, hamming distance, etc.) and see if they're similar. The larger the vectors are, the less likely they are to be similar by chance, so the more likely it is that similar-looking vectors are "about" the same things. Second, you can literally reason with them. It's possible to implement logical inference with _modus tollens_ and _modus ponens_ in the VSA framework, as well as logical operators based on a parallel between boolean operators and Birkhoff and VonNeumann's calculus of quantum mechanics. Predication, analogies, etc. are all available in VSA. Finally, deep networks and neural networks in general <3 VSAs. One way to create vectors for VSAs is to train a neural network to generate them (e.g. an autoencoder and use the latent representation as your vectors). 
 
+The basic way to operationalize all of this is actually remarkably straightforward from a high-level standpoint
+- At the botom level: The robot in the world, probably a two-motor walker with some simple sensors. 
+- Controlling the robot: Typical '90s BEAM coupled oscillators acting as spinal central pattern generators. 
+- Translation layer: "BEAM dOeSn'T sCaLe" analog signals from the controller feed an RC network (in simulation, probably not actual BEAM hardware) to embed the robot's sensorium in a high-D space for VSA. 
+- High-level: VSA, symbolic logic or neural networks. 
+
